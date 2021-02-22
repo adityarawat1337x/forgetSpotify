@@ -1,11 +1,11 @@
 from bs4 import BeautifulSoup
 import requests
 import re
-from getch import getch
+from msvcrt import getch
 from time import time
 import vlc
 import pafy
-import os 
+from os import system as sys
 #from googleapiclient.discovery import build
 from func_timeout import func_timeout
 from func_timeout.exceptions import FunctionTimedOut
@@ -22,15 +22,15 @@ from multiprocessing import Process
 
 key = 13
 
+
 def getKey():
     global key
     key = ord(getch())
 
 
 if __name__ == "__main__":
-    os.system('mode con: cols=20 lines=49')
     while True:
-        os.system('cls' if os.name == 'nt' else 'clear')
+        sys('cls||clear')
         query = "https://www.youtube.com/results?search_query=" + \
             input("\t\tMUzIK\n\n   Song: ").replace(" ", "+") + "+lyrics"
         print("\n\t    Searching..")
@@ -57,10 +57,10 @@ if __name__ == "__main__":
             player = vlc.MediaPlayer(song.url)
             state = 'Playing'
             player.play()
-            key = 127
+            key = 97
             while player.is_playing:
                 try:
-                    os.system('cls' if os.name == 'nt' else 'clear')
+                    sys('cls||clear')
                     elapsed = time() - start
                     print(
                         f"\t\tMUzIK\n\n   {state} : {videoName}")
@@ -82,15 +82,16 @@ if __name__ == "__main__":
                         player.play()
                         state = "Playing"
                         pausePLay = False
-                    elif(key == 27):
+                    elif(key == 8):
                         player.stop()
                         exit(0)
-                    elif(key == 10 or key == 127):
+                    elif(key == 13 or key == 97):
                         player.stop()
                         break
                 except:
                     player.stop()
                     break
-            if(key == 10):
+            if(key == 13):
                 player.stop()
                 break
+            player.stop()
