@@ -5,7 +5,7 @@ from getch import getch
 from time import time
 import vlc
 import pafy
-from os import system as sys
+import os 
 #from googleapiclient.discovery import build
 from func_timeout import func_timeout
 from func_timeout.exceptions import FunctionTimedOut
@@ -14,7 +14,7 @@ from multiprocessing import Process
 # hwnd = win32gui.GetForegroundWindow()
 # win32gui.SetWindowPos(hwnd, win32con.HWND_TOPMOST, -5, -25, 600, 70, 0)
 
-apiKey = "AIzaSyBIkB8QyXqxHODAOWUmmRrOnNXXIUOoFck"
+# apiKey = "google api key for youtube"
 
 # def download(audio):
 #    audio.download(filepath="tempMUSIC/")
@@ -30,7 +30,7 @@ def getKey():
 
 if __name__ == "__main__":
     while True:
-        sys('clear')
+        os.system('cls' if os.name == 'nt' else 'clear')
         query = "https://www.youtube.com/results?search_query=" + \
             input("\t\tMUzIK\n\n   Song: ").replace(" ", "+") + "+lyrics"
         print("\n\t    Searching..")
@@ -60,7 +60,7 @@ if __name__ == "__main__":
             key = 97
             while player.is_playing:
                 try:
-                    sys('clear')
+                    os.system('cls' if os.name == 'nt' else 'clear')
                     elapsed = time() - start
                     print(
                         f"\t\tMUzIK\n\n   {state} : {videoName}")
@@ -94,4 +94,3 @@ if __name__ == "__main__":
             if(key == 10):
                 player.stop()
                 break
-            # player.stop()
