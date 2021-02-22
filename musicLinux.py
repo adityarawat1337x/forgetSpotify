@@ -20,7 +20,7 @@ from multiprocessing import Process
 #    audio.download(filepath="tempMUSIC/")
 
 
-key = 13
+key = 100
 
 def getKey():
     global key
@@ -57,7 +57,7 @@ if __name__ == "__main__":
             player = vlc.MediaPlayer(song.url)
             state = 'Playing'
             player.play()
-            key = 127
+            key = 27
             while player.is_playing:
                 try:
                     os.system('cls' if os.name == 'nt' else 'clear')
