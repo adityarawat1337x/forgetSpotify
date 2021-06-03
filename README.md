@@ -4,7 +4,7 @@
 <h2>Install:</h2><br>
     <ol>
     <li> Run command "source ./bin/activate.(your shell type)"
-     <br>Example: "source ./bin/activate.fish"
+     <br>Example: "source ./bin/activate.sh" or "source ./bin/activate.fish" (depends on your shell)
      <br>This will initialize the Environment.</li>
     <li> Run command "python musicLinux.py"</li>
     </ol>
