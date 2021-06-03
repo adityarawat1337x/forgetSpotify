@@ -10,9 +10,9 @@
     </ol>
 <h2>Usage:</h2>
     <ol>
-   <li>  Type your song and press enter.</li>
-   <li> Press "space" anytime to play/pause</li>
-    <li>Press "enter" to  enter new song</li>
-    <li> Press "backspace" to start the song from begginning </li>
-    <li> Press "esc" to exit player   </li>
+   <li>1 Type your song and press enter.</li>
+   <li> 2 Press "space" anytime to play/pause</li>
+    <li>3 Press "enter" to  enter new song</li>
+    <li>4 Press "backspace" to start the song from begginning </li>
+    <li>5 Press "esc" to exit player   </li>
     </ol>
